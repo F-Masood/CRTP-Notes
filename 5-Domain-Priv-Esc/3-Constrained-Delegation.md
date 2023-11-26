@@ -14,7 +14,9 @@
 ## Enumerate users and computers with CD enabled
 ```powershell
 Get-DomainUser -TrustedToAuth
+Get-DomainUser -TrustedToAuth | select samaccountname,msds-allowedtodelegateto
 Get-DomainComputer -TrustedToAuth
+Get-DomainComputer -TrustedToAuth | select samaccountname,msds-allowedtodelegateto
 ```
 
 ## Requesting a TGT
